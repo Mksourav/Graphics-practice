@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+	int gd=DETECT,gm,i,j,x,y,p,q;
+	clrscr();
+	initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+	//setcolor(YELLOW);
+	j=0;
+	for(i=1;i<=50;i++)
+	{
+		if(i%3==0)
+		{
+			setcolor(j);
+			j++;
+		}
+		if(i%2==0)
+		{
+			circle(315,235,i);
+			delay(100);
+		}
+		circle(315,235,i);
+	}
+	for(x=315,y=235,p=315,q=235;x>=100,y>=100,p<=420,q<=420;x--,y--,p++,q++)
+	{
+		setcolor(j);
+		if(x%2==0||y%2==0||p%2==0||q%2==0)
+		{
+			rectangle(x,y,p,q);
+			delay(50);
+		}
+		rectangle(x,y,p,q);
+		j++;
+	}
+	getch();
+	closegraph();
+}

@@ -1,0 +1,84 @@
+#include<graphics.h>
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int gd=DETECT,gm,x,y,i,j;
+	initgraph(&gd,&gm,"c:\\turboc3\\BGI");
+	x=getmaxx();
+	y=getmaxy();
+
+	//rectangle(0,0,632,472);
+	rectangle(0,0,0,0);
+	for(i=1;i<=i-1;i=i+5)
+	{
+		for(j=1;j<=y-1;j=j+5)
+			putpixel(i,j,6);
+	}
+	for(i=1;i<=x-1;i=i+10)
+	{
+		for(j=1;j<=y-1;j=j+10)
+			putpixel(i,j,1);
+	}
+	for(i=1;i<=x-1;i=i+15)
+	{
+		for(j=1;j<=y-1;j=j+15)
+			putpixel(i,j,4);
+	}
+	for(i=1;i<=x-1;i=i+20)
+	{
+		for(j=1;j<=y-1;j=j+20)
+			putpixel(i,j,YELLOW);
+	}
+	for(i=CLOSE_DOT_FILL;i<=CLOSE_DOT_FILL;i++)
+	{
+	setfillstyle(i,166);
+	//smileface
+
+	ellipse(150,80,0,180,100,75);
+	arc(90,110,140,235,50);
+	arc(212,115,305,40,50);
+	fillellipse(80,200,50,40);
+	fillellipse(222,200,50,40);
+	fillellipse(150,200,100,100);
+	arc(100,178,340,210,4);
+	arc(200,178,340,210,4);
+	ellipse(100,177,15,165,12,8);
+	ellipse(100,173,195,345,12,8);
+	ellipse(200,177,15,165,12,8);
+	ellipse(200,173,195,345,12,8);
+	ellipse(150,200,310,230,4,10);
+	arc(150,200,210,330,50);
+	getch();
+
+	//sadface
+	ellipse(500,80,0,180,100,75);
+	fillellipse(430,200,50,40);
+	arc(440,110,140,235,50);
+	arc(562,115,305,40,50);
+	fillellipse(570,200,50,40);
+	fillellipse(500,200,100,100);
+	arc(450,178,340,210,3);
+	arc(550,178,340,210,3);
+	ellipse(450,182,30,150,12,8);
+	ellipse(450,173,220,320,12,8);
+	ellipse(550,182,30,150,12,8);
+	ellipse(550,173,215,315,12,8);
+	ellipse(500,210,310,230,4,10);
+	arc(500,300,50,130,50);
+	circle(462,182,1);
+	circle(538,182,1);
+	circle(462,192,1);
+	circle(538,192,1);
+	circle(462,202,1);
+	circle(538,202,1);
+	circle(462,210,1);
+	circle(538,210,1);
+	circle(462,218,1);
+	circle(538,218,1);
+	}
+	getch();
+	closegraph();
+
+}

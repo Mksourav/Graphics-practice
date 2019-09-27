@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+	int gd=DETECT,gm,x,y,i,j;
+	clrscr();
+	initgraph(&gd,&gm,"c:\\turboc3\\BGI");
+	x=getmaxx();
+	y=getmaxy();
+	rectangle(0,0,632,472);
+	for(i=1;i<=i-1;i=i+5)
+	{
+		for(j=1;j<=y-1;j=j+5)
+			putpixel(i,j,6);
+	}
+	for(i=1;i<=x-1;i=i+10)
+	{
+		for(j=1;j<=y-1;j=j+10)
+			putpixel(i,j,1);
+	}
+	for(i=1;i<=x-1;i=i+15)
+	{
+		for(j=1;j<=y-1;j=j+15)
+			putpixel(i,j,4);
+	}
+	for(i=1;i<=x-1;i=i+20)
+	{
+		for(j=1;j<=y-1;j=j+20)
+			putpixel(i,j,YELLOW);
+	}
+	getch();
+	closegraph();
+}
